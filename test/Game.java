@@ -3,7 +3,7 @@ public class Game {
     private String name;
     private char[] board;
 
-    private Game(String name) {
+    public Game(String name) {
         this.name = name;
         this.board = new char[] {'-','-','-'};
 
@@ -17,3 +17,7 @@ public class Game {
         return board;
     }
 }
+
+
+
+
