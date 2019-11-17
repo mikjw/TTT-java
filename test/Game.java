@@ -11,7 +11,8 @@ public class Game {
     }
 
     public void move(int row, int col) {
-        this.board[0][0] = 'x';
+
+        this.board[row][col] = 'x';
     }
 }
 

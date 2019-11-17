@@ -11,10 +11,17 @@ class GameTest {
     }
 
     @Test
-    void move() {
+    void moveTopLeft() {
         Game game = new Game();
         game.move(0,0);
         assertArrayEquals(new char[][] {{'x','-','-'}, {'-','-','-'}, {'-','-','-'}}, game.getBoard());
+    }
+
+    @Test
+    void moveBottomRight() {
+        Game game = new Game();
+        game.move(2,2);
+        assertArrayEquals(new char[][] {{'-','-','-'}, {'-','-','-'}, {'-','-','x'}}, game.getBoard());
     }
 }
 
