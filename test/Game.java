@@ -1,22 +1,22 @@
 public class Game {
 
     private char[][] board = new char[][] {{'-','-','-'}, {'-','-','-'}, {'-','-','-'}};
-    private boolean player_one_turn = true;
+    private boolean playerOneTurn = true;
 
     public char[][] getBoard() {
         return board;
     }
 
-    public boolean isPlayer_one_turn() {
-        return player_one_turn;
+    public boolean isplayerOneTurn() {
+        return playerOneTurn;
     }
 
     public void move(int row, int col) {
         this.board[row][col] = 'x';
-        if (this.player_one_turn == true) {
-            this.player_one_turn = false;
+        if (this.playerOneTurn == true) {
+            this.playerOneTurn = false;
         } else {
-            this.player_one_turn = true;
+            this.playerOneTurn = true;
         };
     }
 }
