@@ -13,11 +13,7 @@ public class Game {
 
     public void move(int row, int col) {
         this.board[row][col] = 'x';
-        if (this.playerOneTurn == true) {
-            this.playerOneTurn = false;
-        } else {
-            this.playerOneTurn = true;
-        };
+        this.playerOneTurn = !this.playerOneTurn;
     }
 }
 
