@@ -37,6 +37,16 @@ class GameTest {
         game.move(0, 0);
         assertEquals(false, game.isPlayer_one_turn());
     }
+
+    @Test
+    void alternatingTurn() {
+        Game game = new Game();
+        assertEquals(true, game.isPlayer_one_turn());
+        game.move(0, 0);
+        assertEquals(false, game.isPlayer_one_turn());
+        game.move(2, 2);
+        assertEquals(true, game.isPlayer_one_turn());
+    }
 }
 
 
