@@ -23,6 +23,12 @@ class GameTest {
         game.move(2,2);
         assertArrayEquals(new char[][] {{'-','-','-'}, {'-','-','-'}, {'-','-','x'}}, game.getBoard());
     }
+
+    @Test
+    void storingTurn() {
+        Game game = new Game();
+        assertEquals(true, game.getTurnStatus());
+    }
 }
 
 
