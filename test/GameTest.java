@@ -27,7 +27,7 @@ class GameTest {
     @Test
     void storingTurn() {
         Game game = new Game();
-        assertEquals(true, game.getTurnStatus());
+        assertEquals(true, game.isPlayer_one_turn());
     }
 }
 
