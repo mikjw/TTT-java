@@ -12,7 +12,11 @@ public class Game {
     }
 
     public void move(int row, int col) {
-        this.board[row][col] = 'x';
+        if (this.playerOneTurn) {
+            this.board[row][col] = 'x';
+        } else {
+            this.board[row][col] = 'o';
+        }
         this.playerOneTurn = !this.playerOneTurn;
     }
 }

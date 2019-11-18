@@ -47,6 +47,14 @@ class GameTest {
         game.move(2, 2);
         assertTrue(game.isplayerOneTurn());
     }
+
+    @Test
+    void markingNaughts() {
+        Game game = new Game();
+        game.move(0, 0);
+        game.move(2, 2);
+        assertArrayEquals(new char[][] {{'x','-','-'}, {'-','-','-'}, {'-','-','o'}}, game.getBoard());
+    }
 }
 
 
