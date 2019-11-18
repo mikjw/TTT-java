@@ -13,6 +13,7 @@ public class Game {
 
     public void move(int row, int col) {
         this.board[row][col] = 'x';
+        this.player_one_turn = false;
     }
 }
 
