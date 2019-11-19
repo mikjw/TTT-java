@@ -130,6 +130,16 @@ class GameTest {
         game.move(2, 2);
         assertEquals("GAME OVER", game.move(0, 2));
     }
+
+//    @Test
+//    void xWinsVertically() {
+//        Game game = new Game();
+//        game.move(0, 0);
+//        game.move(0, 0);
+//        game.move(1, 0);
+//        game.move(0, 1);
+//        assertEquals("GAME OVER", game.move(2, 0));
+//    }
 }
 
 
