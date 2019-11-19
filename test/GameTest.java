@@ -98,7 +98,9 @@ class GameTest {
     void xWinsHorizontally() {
         Game game = new Game();
         game.move(0, 0);
+        game.move(1, 0);
         game.move(0, 1);
+        game.move(1, 1);
         assertEquals("GAME OVER", game.move(0, 2));
     }
 
