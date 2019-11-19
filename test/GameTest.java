@@ -57,6 +57,13 @@ class GameTest {
     }
 
     @Test
+    void blockedCells() {
+        Game game = new Game();
+        game.move(0, 0);
+        assertEquals("invalid move", game.move(0,0));
+    }
+
+    @Test
     void checkBoardFull() {
         Game game = new Game();
         game.move(1, 1);

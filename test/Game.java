@@ -22,10 +22,12 @@ public class Game {
         return true;
     }
 
-    public void move(int row, int col) {
+    public String move(int row, int col) {
+        if (board[row][col] != '-') return "invalid move";
         if (this.playerOneTurn) this.board[row][col] = 'x';
         else this.board[row][col] = 'o';
         this.playerOneTurn = !this.playerOneTurn;
+        return null;
     }
 }
 
