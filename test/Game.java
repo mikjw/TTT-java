@@ -27,6 +27,10 @@ public class Game {
         if (this.playerOneTurn) this.board[row][col] = 'x';
         else this.board[row][col] = 'o';
         this.playerOneTurn = !this.playerOneTurn;
+        return checkRowsForWin();
+    }
+
+    private String checkRowsForWin() {
         for (int i=0; i<3; i++) {
             if (board[i][0] != '-' && board[i][1] != '-' && board[i][2] != '-') {
                 return "GAME OVER";
