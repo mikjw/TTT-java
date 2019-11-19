@@ -105,6 +105,12 @@ class GameTest {
     }
 
     @Test
+    void noWin() {
+        Game game = new Game();
+        assertNull(game.move(0, 2));
+    }
+
+    @Test
     void xWinsHorizontallyAgain() {
         Game game = new Game();
         game.move(1, 0);
@@ -115,9 +121,14 @@ class GameTest {
     }
 
     @Test
-    void noWin() {
+    void oWinsHorizontally() {
         Game game = new Game();
-        assertNull(game.move(0, 2));
+        game.move(1, 0);
+        game.move(0, 0);
+        game.move(2, 1);
+        game.move(0, 1);
+        game.move(2, 2);
+        assertEquals("GAME OVER", game.move(0, 2));
     }
 }
 

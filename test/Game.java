@@ -28,7 +28,7 @@ public class Game {
         else this.board[row][col] = 'o';
         this.playerOneTurn = !this.playerOneTurn;
         for (int i=0; i<3; i++) {
-            if (board[i][0] == 'x' && board[i][1] == 'x' && board[i][2] == 'x') {
+            if (board[i][0] != '-' && board[i][1] != '-' && board[i][2] != '-') {
                 return "GAME OVER";
             }
         }
