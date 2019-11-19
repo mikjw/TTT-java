@@ -2,7 +2,6 @@ public class Game {
 
     private char[][] board = new char[][] {{'-','-','-'}, {'-','-','-'}, {'-','-','-'}};
     private boolean playerOneTurn = true;
-    private boolean boardFull = true;
 
     public char[][] getBoard() {
         System.out.print(board[0]);
@@ -16,7 +15,12 @@ public class Game {
     }
 
     public boolean isBoardFull() {
-        return boardFull;
+        boolean full = true;
+        for (int i=0; i<3; i++)
+            for (int j=0; j<3; j++)
+                if (board[i][j] == '-')
+                    full = false;
+        return full;
     }
 
     public void move(int row, int col) {
