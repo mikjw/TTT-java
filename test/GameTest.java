@@ -57,7 +57,7 @@ class GameTest {
     }
 
     @Test
-    void blockedCells() {
+    void alreadyFilledCells() {
         Game game = new Game();
         game.move(0, 0);
         assertEquals("invalid move", game.move(0,0));
@@ -92,6 +92,14 @@ class GameTest {
         game.move(0, 1);
         assertArrayEquals(new char[][] {{'x','o','x'}, {'-','x','o'}, {'o','o','x'}}, game.getBoard());
         assertFalse(game.isBoardFull());
+    }
+
+    @Test
+    void xWinsHorizontally() {
+        Game game = new Game();
+        game.move(0, 0);
+        game.move(0, 1);
+        assertEquals("GAME OVER", game.move(0, 2));
     }
 }
 

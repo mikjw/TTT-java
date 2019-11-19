@@ -27,7 +27,7 @@ public class Game {
         if (this.playerOneTurn) this.board[row][col] = 'x';
         else this.board[row][col] = 'o';
         this.playerOneTurn = !this.playerOneTurn;
-        return null;
+        return "GAME OVER";
     }
 }
 
