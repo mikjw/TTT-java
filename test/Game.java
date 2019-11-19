@@ -27,11 +27,12 @@ public class Game {
         if (this.playerOneTurn) this.board[row][col] = 'x';
         else this.board[row][col] = 'o';
         this.playerOneTurn = !this.playerOneTurn;
-        if (board[0][0] == 'x' && board[0][1] == 'x' && board[0][2] == 'x') {
-            return "GAME OVER";
-        } else {
-            return null;
+        for (int i=0; i<3; i++) {
+            if (board[i][0] == 'x' && board[i][1] == 'x' && board[i][2] == 'x') {
+                return "GAME OVER";
+            }
         }
+        return null;
     }
 }
 
