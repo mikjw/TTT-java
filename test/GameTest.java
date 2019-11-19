@@ -101,6 +101,12 @@ class GameTest {
         game.move(0, 1);
         assertEquals("GAME OVER", game.move(0, 2));
     }
+
+    @Test
+    void noWin() {
+        Game game = new Game();
+        assertNull(game.move(0, 2));
+    }
 }
 
 
