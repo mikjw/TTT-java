@@ -25,8 +25,7 @@ public class Game {
     public String move(int row, int col) {
         char currentPlayer = playerOneTurn ? 'x' : 'o';
         if (board[row][col] != '-') return "invalid move";
-        if (this.playerOneTurn) this.board[row][col] = 'x';
-        else this.board[row][col] = 'o';
+        this.board[row][col] = currentPlayer;
         this.playerOneTurn = !this.playerOneTurn;
         if (checkRowsForWin(currentPlayer) || checkColsForWin(currentPlayer)) {
             return "GAME OVER";

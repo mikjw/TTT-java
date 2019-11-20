@@ -151,6 +151,17 @@ class GameTest {
         game.move(2, 0);
         assertEquals("GAME OVER", game.move(2, 1));
     }
+
+    @Test
+    void xWinsDiagonally() {
+        Game game = new Game();
+        game.move(0, 0);
+        game.move(0, 1);
+        game.move(1, 0);
+        game.move(1, 1);
+        game.move(2, 0);
+        assertEquals("GAME OVER", game.move(2, 1));
+    }
 }
 
 
