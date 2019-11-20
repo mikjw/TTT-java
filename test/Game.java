@@ -27,7 +27,7 @@ public class Game {
         if (this.playerOneTurn) this.board[row][col] = 'x';
         else this.board[row][col] = 'o';
         this.playerOneTurn = !this.playerOneTurn;
-        if (checkRowsForWin()) {
+        if (checkRowsForWin() || checkColsForWin()) {
             return "GAME OVER";
         }
         return null;
@@ -37,6 +37,16 @@ public class Game {
         char player = playerOneTurn ? 'o' : 'x';
         for (int i=0; i<3; i++) {
             if (board[i][0] == player && board[i][1] == player && board[i][2] == player) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private Boolean checkColsForWin() {
+        char player = playerOneTurn ? 'o' : 'x';
+        for (int i = 0; i < 3; i++) {
+            if (board[0][i] == player && board[1][i] == player && board[2][i] == player) {
                 return true;
             }
         }
