@@ -10,7 +10,7 @@ public class Game {
         return board;
     }
 
-    public boolean isplayerOneTurn() {
+    public boolean isPlayerOneTurn() {
         return playerOneTurn;
     }
 

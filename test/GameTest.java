@@ -27,25 +27,25 @@ class GameTest {
     @Test
     void storingTurn() {
         Game game = new Game();
-        assertTrue(game.isplayerOneTurn());
+        assertTrue(game.isPlayerOneTurn());
     }
 
     @Test
     void changingTurn() {
         Game game = new Game();
-        assertTrue(game.isplayerOneTurn());
+        assertTrue(game.isPlayerOneTurn());
         game.move(0, 0);
-        assertFalse(game.isplayerOneTurn());
+        assertFalse(game.isPlayerOneTurn());
     }
 
     @Test
     void alternatingTurn() {
         Game game = new Game();
-        assertTrue(game.isplayerOneTurn());
+        assertTrue(game.isPlayerOneTurn());
         game.move(0, 0);
-        assertFalse(game.isplayerOneTurn());
+        assertFalse(game.isPlayerOneTurn());
         game.move(2, 2);
-        assertTrue(game.isplayerOneTurn());
+        assertTrue(game.isPlayerOneTurn());
     }
 
     @Test
