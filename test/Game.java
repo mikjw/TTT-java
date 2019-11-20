@@ -27,17 +27,20 @@ public class Game {
         if (this.playerOneTurn) this.board[row][col] = 'x';
         else this.board[row][col] = 'o';
         this.playerOneTurn = !this.playerOneTurn;
-        return checkRowsForWin();
+        if (checkRowsForWin()) {
+            return "GAME OVER";
+        }
+        return null;
     }
 
-    private String checkRowsForWin() {
+    private Boolean checkRowsForWin() {
         char player = playerOneTurn ? 'o' : 'x';
         for (int i=0; i<3; i++) {
             if (board[i][0] == player && board[i][1] == player && board[i][2] == player) {
-                return "GAME OVER";
+                return true;
             }
         }
-        return null;
+        return false;
     }
 }
 
