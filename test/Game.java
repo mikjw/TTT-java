@@ -23,18 +23,18 @@ public class Game {
     }
 
     public String move(int row, int col) {
+        char currentPlayer = playerOneTurn ? 'x' : 'o';
         if (board[row][col] != '-') return "invalid move";
         if (this.playerOneTurn) this.board[row][col] = 'x';
         else this.board[row][col] = 'o';
         this.playerOneTurn = !this.playerOneTurn;
-        if (checkRowsForWin() || checkColsForWin()) {
+        if (checkRowsForWin(currentPlayer) || checkColsForWin(currentPlayer)) {
             return "GAME OVER";
         }
         return null;
     }
 
-    private Boolean checkRowsForWin() {
-        char player = playerOneTurn ? 'o' : 'x';
+    private Boolean checkRowsForWin(char player) {
         for (int i=0; i<3; i++) {
             if (board[i][0] == player && board[i][1] == player && board[i][2] == player) {
                 return true;
@@ -43,8 +43,7 @@ public class Game {
         return false;
     }
 
-    private Boolean checkColsForWin() {
-        char player = playerOneTurn ? 'o' : 'x';
+    private Boolean checkColsForWin(char player) {
         for (int i = 0; i < 3; i++) {
             if (board[0][i] == player && board[1][i] == player && board[2][i] == player) {
                 return true;
