@@ -1,1 +1,1 @@
-Tic Tac Toe, test driven with JUnit 5
+Tic Tac Toe, test driven with JUnit 5. All source files and tests are currently stored in the Test folder.

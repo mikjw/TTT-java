@@ -156,11 +156,10 @@ class GameTest {
     void xWinsDiagonally() {
         Game game = new Game();
         game.move(0, 0);
-        game.move(0, 1);
-        game.move(1, 0);
+        game.move(0, 2);
         game.move(1, 1);
-        game.move(2, 0);
-        assertEquals("GAME OVER", game.move(2, 1));
+        game.move(1, 2);
+        assertEquals("GAME OVER", game.move(2, 2));
     }
 }
 
