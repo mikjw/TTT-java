@@ -27,10 +27,7 @@ public class Game {
         if (board[row][col] != '-') return "invalid move";
         board[row][col] = currentPlayer;
         playerOneTurn = !playerOneTurn;
-        if (checkRowsForWin(currentPlayer) || checkColsForWin(currentPlayer) || checkDiagsForWin(currentPlayer)) {
-            return "GAME OVER";
-        }
-        return null;
+        return checkForWin(currentPlayer);
     }
 
     private Boolean checkRowsForWin(char player) {
@@ -58,6 +55,14 @@ public class Game {
             return true;
         }
         return false;
+    }
+
+    private String checkForWin(char player) {
+         if (checkRowsForWin(player) || checkColsForWin(player) || checkDiagsForWin(player)) {
+             return "GAME OVER";
+         } else {
+             return null;
+         }
     }
 }
 
