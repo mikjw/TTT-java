@@ -153,13 +153,23 @@ class GameTest {
     }
 
     @Test
-    void xWinsDiagonally() {
+    void xWinsDiagonallyLeft() {
         Game game = new Game();
         game.move(0, 0);
         game.move(0, 2);
         game.move(1, 1);
         game.move(1, 2);
         assertEquals("GAME OVER", game.move(2, 2));
+    }
+
+    @Test
+    void xWinsDiagonallyRight() {
+        Game game = new Game();
+        game.move(0, 2);
+        game.move(1, 2);
+        game.move(1, 1);
+        game.move(2, 2);
+        assertEquals("GAME OVER", game.move(2, 0));
     }
 }
 
