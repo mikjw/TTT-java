@@ -1,1 +1,1 @@
-Tic Tac Toe, test driven to practise Java with JUnit 5. All source files and tests are currently stored in the Test folder.
+Tic Tac Toe, built to practise TDD in Java with JUnit 5.
