@@ -4,9 +4,6 @@ public class Game {
     private boolean playerOneTurn = true;
 
     public char[][] getBoard() {
-        System.out.print(board[0]);
-        System.out.print(board[1]);
-        System.out.print(board[2]);
         return board;
     }
 
