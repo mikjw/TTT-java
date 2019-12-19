@@ -24,7 +24,7 @@ public class Game {
         if (board[row][col] != '-') return "invalid move";
         board[row][col] = currentPlayer;
         playerOneTurn = !playerOneTurn;
-        return checkForWin(currentPlayer);
+        return checkForEnd(currentPlayer);
     }
 
     private Boolean checkRowsForWin(char player) {
@@ -54,8 +54,8 @@ public class Game {
         return false;
     }
 
-    private String checkForWin(char player) {
-         if (checkRowsForWin(player) || checkColsForWin(player) || checkDiagsForWin(player)) {
+    private String checkForEnd(char player) {
+         if (checkRowsForWin(player) || checkColsForWin(player) || checkDiagsForWin(player) || isBoardFull()) {
              return "GAME OVER";
          } else {
              return null;
