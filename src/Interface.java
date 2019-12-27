@@ -19,12 +19,12 @@ public class Interface {
     }
 
     public String drawBoard(char[][] board) {
-        String output = "";
+        String output = " A B C\n";
         for (int i=0; i<3; i++) {
             for (int j=0; j<3; j++) {
                 output += "|" + board[i][j];
             }
-            output += "|\n";
+            output += "| " + (i+1) + "\n";
         }
         return output;
     }
