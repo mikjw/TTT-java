@@ -7,21 +7,21 @@ class GameTest {
     @Test
     void getBoard() {
         Game game = new Game();
-        assertArrayEquals(new char[][] {{'-','-','-'}, {'-','-','-'}, {'-','-','-'}}, game.getBoard());
+        assertArrayEquals(new char[][]{{'-', '-', '-'}, {'-', '-', '-'}, {'-', '-', '-'}}, game.getBoard());
     }
 
     @Test
     void moveTopLeft() {
         Game game = new Game();
-        game.move(0,0);
-        assertArrayEquals(new char[][] {{'x','-','-'}, {'-','-','-'}, {'-','-','-'}}, game.getBoard());
+        game.move(0, 0);
+        assertArrayEquals(new char[][]{{'x', '-', '-'}, {'-', '-', '-'}, {'-', '-', '-'}}, game.getBoard());
     }
 
     @Test
     void moveBottomRight() {
         Game game = new Game();
-        game.move(2,2);
-        assertArrayEquals(new char[][] {{'-','-','-'}, {'-','-','-'}, {'-','-','x'}}, game.getBoard());
+        game.move(2, 2);
+        assertArrayEquals(new char[][]{{'-', '-', '-'}, {'-', '-', '-'}, {'-', '-', 'x'}}, game.getBoard());
     }
 
     @Test
@@ -53,14 +53,14 @@ class GameTest {
         Game game = new Game();
         game.move(0, 0);
         game.move(2, 2);
-        assertArrayEquals(new char[][] {{'x','-','-'}, {'-','-','-'}, {'-','-','o'}}, game.getBoard());
+        assertArrayEquals(new char[][]{{'x', '-', '-'}, {'-', '-', '-'}, {'-', '-', 'o'}}, game.getBoard());
     }
 
     @Test
     void alreadyFilledCells() {
         Game game = new Game();
         game.move(0, 0);
-        assertEquals("invalid move", game.move(0,0));
+        assertEquals("invalid move", game.move(0, 0));
     }
 
     @Test
@@ -75,7 +75,7 @@ class GameTest {
         game.move(0, 0);
         game.move(0, 1);
         game.move(1, 0);
-        assertArrayEquals(new char[][] {{'x','o','x'}, {'x','x','o'}, {'o','o','x'}}, game.getBoard());
+        assertArrayEquals(new char[][]{{'x', 'o', 'x'}, {'x', 'x', 'o'}, {'o', 'o', 'x'}}, game.getBoard());
         assertTrue(game.isBoardFull());
     }
 
@@ -90,7 +90,7 @@ class GameTest {
         game.move(2, 0);
         game.move(0, 0);
         game.move(0, 1);
-        assertArrayEquals(new char[][] {{'x','o','x'}, {'-','x','o'}, {'o','o','x'}}, game.getBoard());
+        assertArrayEquals(new char[][]{{'x', 'o', 'x'}, {'-', 'x', 'o'}, {'o', 'o', 'x'}}, game.getBoard());
         assertFalse(game.isBoardFull());
     }
 
