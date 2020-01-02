@@ -6,6 +6,6 @@ class InputConverterTest {
     @Test
     void returnsArray() {
         InputConverter conv = new InputConverter();
-        assertArrayEquals(new int[]{1,1}, conv.convert());
+        assertArrayEquals(new int[]{1,1}, conv.convert("B2"));
     }
 }
