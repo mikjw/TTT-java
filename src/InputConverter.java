@@ -3,9 +3,9 @@ public class InputConverter {
         int[] output;
         if (input == "B2") {
             output = new int[]{1, 1};
-        } else {
+        } else if (input == "A2") {
             output = new int[]{0, 1};
-        }
+        } else   output = new int[]{2, 2};
         return output;
     }
 }
