@@ -14,4 +14,10 @@ class InputConverterTest {
         InputConverter conv = new InputConverter();
         assertArrayEquals(new int[]{0,1}, conv.convert("A2"));
     }
+
+    @Test
+    void returnsCorrectArrayForC3() {
+        InputConverter conv = new InputConverter();
+        assertArrayEquals(new int[]{2,2}, conv.convert("C3"));
+    }
 }
